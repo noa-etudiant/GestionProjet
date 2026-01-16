@@ -1,0 +1,27 @@
+créer un produit
+
+INSERT INTO Produit (nom, stock, prix, id_type) 
+VALUES ('Casque Gamer Pro', 10, 89.99, 2);
+
+
+
+baisse le prix
+
+UPDATE Produit 
+SET prix = 79.99 
+WHERE nom = 'Casque Gamer Pro';
+
+
+
+retirer un produit
+
+DELETE FROM Produit 
+WHERE nom = 'Casque Gamer Pro';
+
+
+
+créer un utilisateur "stagiaire" qui ne peut que lire
+
+CREATE USER 'stagiaire'@'localhost' IDENTIFIED BY 'motdepasse123';
+GRANT SELECT ON GestionStock.* TO 'stagiaire'@'localhost';
+FLUSH PRIVILEGES;
